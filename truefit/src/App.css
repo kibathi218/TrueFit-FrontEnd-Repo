@@ -1,38 +1,43 @@
-.App {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* --------------------NAVBAR-------------------- */
+
+.navbar-nav {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
   align-items: center;
+}
+
+/* --------------------HERO SECTION-------------------- */
+
+
+.hero { 
+  height: 80vh;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-image: url("https://bestlifeonline.com/wp-content/uploads/sites/3/media/images/ext/113364554/shutterstock_379747825.jpg?quality=82&strip=1&resize=640%2C360");
+  background-size: cover;
+  color: rgb(252, 252, 252);
+  text-align: center;
+  padding-top: 280px;
 }
 
-.App-link {
-  color: #61dafb;
+.hero h1 {
+  font-size: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hero p {
+  font-size: 25px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(0,0,0,0.25);
 }
