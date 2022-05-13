@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 const Foods = () => {
     return (
         <div className="container">
-            <h1>Hello World</h1>
+            <h1 className="foods-page">Hello World</h1>
 
 
 
