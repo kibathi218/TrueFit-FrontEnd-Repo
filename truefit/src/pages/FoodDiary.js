@@ -18,38 +18,10 @@ const FoodDiary = () => {
         handleFoods()
     }, [])
 
-    const work = myFoods.map((food) => {
-        console.log(food.foodName)
-        if (food.foodName === 'French Fries') {
-            return "hi"
-            console.log(work)
-        }
-
-    })
 
     const addFood = () => {
         navigate('/add-food')
     }
-
-    // const sportsTeams = [
-    //     {
-    //         city: 'Miami',
-    //         name: 'Heat',
-    //         weather: 'warm'
-    //     },
-    //     {
-    //         city: 'New York',
-    //         name: 'Knicks',
-    //         weather: 'ehh'
-    //     },
-    //     {
-    //         city: 'Chicago',
-    //         name: 'Bulls',
-    //         weather: 'windy'
-    //     }
-    // ]
-
-   
 
 
     return (
@@ -58,7 +30,6 @@ const FoodDiary = () => {
                 <div>
                     <h2>Breakfast</h2>
 
-
                     <button onClick={() => addFood()}>Add Food</button>
                 </div>
 
@@ -66,14 +37,19 @@ const FoodDiary = () => {
                     <h2>Lunch</h2>
 
                     {myFoods.map((food) => (
-
                         <div>
-                            <p>{food.foodName}</p>
-                            <p>{food.calories} calories</p>
-                            <p>{food.carbs}g of carbs</p>
-                            <p>{food.fat}g of fat</p>
-                            <p>{food.protein}g of protein</p>
-                            <hr />
+                            {food.foodName === 'French Fries' ? (
+                                <div>
+                                    <p>{food.foodName}</p>
+                                    <p>{food.calories} calories</p>
+                                    <p>{food.carbs}g of carbs</p>
+                                    <p>{food.fat}g of fat</p>
+                                    <p>{food.protein}g of protein</p>
+                                    <hr />
+                                </div>
+                            ) : (
+                                console.log("hi")
+                            )}
                         </div>
                     ))}
 
@@ -83,11 +59,48 @@ const FoodDiary = () => {
                 <div>
                     <h2>Dinner</h2>
 
+                    {myFoods.map((food) => (
+                        <div>
+                            {food.foodName === 'Chicken Alfredo' ? (
+                                <div>
+                                    <p>{food.foodName}</p>
+                                    <p>{food.calories} calories</p>
+                                    <p>{food.carbs}g of carbs</p>
+                                    <p>{food.fat}g of fat</p>
+                                    <p>{food.protein}g of protein</p>
+                                    <hr />
+                                </div>
+                            ) : (
+                                console.log("hi")
+                            )}
+                        </div>
+                    ))}
+
+
+
                     <button onClick={() => addFood()}>Add Food</button>
                 </div>
 
                 <div>
                     <h2>Snacks</h2>
+
+                    {myFoods.map((food) => (
+                        <div>
+                            {food.foodName === 'Strawberries' ? (
+                                <div>
+                                    <p>{food.foodName}</p>
+                                    <p>{food.calories} calories</p>
+                                    <p>{food.carbs}g of carbs</p>
+                                    <p>{food.fat}g of fat</p>
+                                    <p>{food.protein}g of protein</p>
+                                    <hr />
+                                </div>
+                            ) : (
+                                console.log("hi")
+                            )}
+                        </div>
+                    ))}
+
                     <button onClick={() => addFood()}>Add Food</button>
                 </div>
 
@@ -97,16 +110,6 @@ const FoodDiary = () => {
                 </div>
             </div>
 
-            {/* {sportsTeams.map((item) => (
-                <div>
-                    {item}
-                </div>
-            ))} */}
-
-
-            {/* <Footer /> */}
-
-            
         </div>
     )
 }
