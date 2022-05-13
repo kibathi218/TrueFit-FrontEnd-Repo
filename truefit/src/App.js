@@ -9,6 +9,7 @@ import Register from "./pages/Register";
 import { CheckSession } from './services/Auth'
 import { useEffect, useState } from 'react'
 import FoodDiary from "./pages/FoodDiary";
+import Foods from "./pages/Foods";
 
 
 export default function App() {
@@ -54,6 +55,7 @@ export default function App() {
         <Route path='/login' element={<LogIn />} />
         <Route path="/register" element={<Register />} />
         <Route path="/food-diary/4" element={<FoodDiary />} />
+        <Route path="/foods" element={<Foods />} />
 
       </Routes>
     </div>
