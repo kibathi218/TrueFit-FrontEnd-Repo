@@ -50,12 +50,12 @@ const AddFood = () => {
 
     return(
         <div className='container login'>
-            <div class="text-center">
-                <div class="form-signin">
+            <div className="text-center">
+                <div className="form-signin">
                     <form onSubmit={handleSubmit}>
-                        <h1 class="h3 mb-3 fw-normal">Add Food</h1>
+                        <h1 className="h3 mb-3 fw-normal">Add Food</h1>
 
-                        <div class="form-floating">
+                        <div className="form-floating">
                             <input type="name" class="form-control" id="floatingInput" placeholder="email@example.com" 
                             onChange={handleChange}
                             value={formValues.userId}
@@ -76,8 +76,8 @@ const AddFood = () => {
                             />
                             <label for="floatingInput">Food Name</label>
                         </div>
-                        <div class="form-floating">
-                            <input type="number" class="form-control" placeholder="Password" 
+                        <div className="form-floating">
+                            <input type="number" className="form-control" placeholder="Password" 
                             onChange={handleChange}
                             value={formValues.calories}
                             required
@@ -103,8 +103,8 @@ const AddFood = () => {
                             />
                             <label for="floatingPassword">Fat</label>
                         </div>
-                        <div class="form-floating">
-                            <input type="number" class="form-control"  placeholder="Password"
+                        <div className="form-floating">
+                            <input type="number" className="form-control"  placeholder="Password"
                             onChange={handleChange}
                             value={formValues.protein}
                             required
@@ -113,7 +113,7 @@ const AddFood = () => {
                             <label for="floatingPassword">Protein</label>
                         </div>
                         <div class="form-floating">
-                            <input type="name" class="form-control"  placeholder="Password"
+                            <input type="name" className="form-control"  placeholder="Password"
                             onChange={handleChange}
                             value={formValues.date}
                             required
@@ -125,7 +125,7 @@ const AddFood = () => {
                         <div class="checkbox mb-3">
                         </div>
                         <button class="w-100 btn btn-lg btn-dark" type="submit">Add To Food Diary</button>
-                        <p class="mt-5 mb-3 text-muted">© TrueFit</p>
+                        <p className="mt-5 mb-3 text-muted">© TrueFit</p>
                     </form>
                 </div>
 
