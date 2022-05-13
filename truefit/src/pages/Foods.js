@@ -3,8 +3,8 @@ import Footer from "../components/Footer";
 
 const Foods = () => {
     return (
-        <div>
-
+        <div className="container">
+            <h1>Hello World</h1>
 
 
 

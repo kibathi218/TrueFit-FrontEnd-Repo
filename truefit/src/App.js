@@ -8,6 +8,7 @@ import Register from "./pages/Register";
 
 import { CheckSession } from './services/Auth'
 import { useEffect, useState } from 'react'
+import FoodDiary from "./pages/FoodDiary";
 
 
 export default function App() {
@@ -31,7 +32,6 @@ export default function App() {
   
     useEffect(() =>{
       const token = localStorage.getItem('token')
-      console.log(process.env.NODE_ENV)
       if (token) {
         checkToken()
       }
@@ -53,6 +53,7 @@ export default function App() {
         <Route path='/' element={<Home />} />
         <Route path='/login' element={<LogIn />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/food-diary/4" element={<FoodDiary />} />
 
       </Routes>
     </div>
