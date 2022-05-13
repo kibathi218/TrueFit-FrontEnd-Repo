@@ -8,3 +8,12 @@ export const AddFoodToDiary = async (data) => {
       throw error
     }
   }
+
+  export const GetFoodById = async (data) => {
+    try{
+      const res = await Client.get('/food-diary/4', data)
+      return res.data
+    } catch (error) {
+      throw error
+    }
+  }
