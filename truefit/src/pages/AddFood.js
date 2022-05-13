@@ -38,6 +38,7 @@ const AddFood = () => {
     return(
         <div className="container add-food-page">
 
+            <h2>Add Food</h2>
             
 
 
