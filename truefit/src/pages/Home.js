@@ -1,6 +1,5 @@
 import React from "react";
 import Footer from "../components/Footer";
-import LogIn from "./Login";
 
 const Home = () => {
     return (
