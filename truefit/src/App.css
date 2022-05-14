@@ -117,3 +117,7 @@
 .add-food-page {
   padding-top: 100px;
 }
+
+.btn {
+  cursor: pointer;
+}
