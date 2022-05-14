@@ -57,13 +57,10 @@ const FoodDiary = () => {
                                 <div>
                                     <p>{food.foodName}</p>
                                     <p>{food.calories} calories</p>
-                                    <p>{food.carbs}g of carbs</p>
-                                    <p>{food.fat}g of fat</p>
-                                    <p>{food.protein}g of protein</p>
                                     <hr />
                                 </div>
                             ) : (
-                                console.log("hi")
+                                console.log("error - foodDiary line 105")
                             )}
                         </div>
                     ))}
@@ -80,13 +77,10 @@ const FoodDiary = () => {
                                 <div>
                                     <p>{food.foodName}</p>
                                     <p>{food.calories} calories</p>
-                                    <p>{food.carbs}g of carbs</p>
-                                    <p>{food.fat}g of fat</p>
-                                    <p>{food.protein}g of protein</p>
                                     <hr />
                                 </div>
                             ) : (
-                                console.log("hi")
+                                console.log("error - foodDiary line 105")
                             )}
                         </div>
                     ))}
@@ -105,13 +99,10 @@ const FoodDiary = () => {
                                 <div>
                                     <p>{food.foodName}</p>
                                     <p>{food.calories} calories</p>
-                                    <p>{food.carbs}g of carbs</p>
-                                    <p>{food.fat}g of fat</p>
-                                    <p>{food.protein}g of protein</p>
                                     <hr />
                                 </div>
                             ) : (
-                                console.log("hi")
+                                console.log("error - foodDiary line 105")
                             )}
                         </div>
                     ))}

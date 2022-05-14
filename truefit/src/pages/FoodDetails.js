@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 import { GetFoodById } from "../services/FoodServices";
 import { useNavigate } from 'react-router-dom'
 
-const FoodDiary = () => {
+const FoodDetails = () => {
     let navigate = useNavigate()
 
 
@@ -129,4 +129,4 @@ const FoodDiary = () => {
     )
 }
 
-export default FoodDiary
+export default FoodDetails
