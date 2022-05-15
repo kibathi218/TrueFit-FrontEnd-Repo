@@ -15,7 +15,8 @@ const AddFood = () => {
         carbs: '',
         fat: '',
         protein: '',
-        date: ''
+        date: '',
+        meal: ''
         })
 
     const handleChange = (e) => {
@@ -31,7 +32,8 @@ const AddFood = () => {
           carbs: formValues.carbs,
           fat: formValues.fat,
           protein: formValues.protein,
-          date: formValues.date
+          date: formValues.date,
+          meal: formValues.meal
         })
         setFormValues({
             userId: '',
@@ -40,12 +42,11 @@ const AddFood = () => {
           carbs: '',
           fat: '',
           protein: '',
-          date: ''
+          date: '',
+          meal: ''
         })
-        navigate('/')
+        navigate('/food-diary/4')
     }
-
-
 
 
     return(
@@ -122,8 +123,18 @@ const AddFood = () => {
                             <label for="floatingPassword">Date</label>
                         </div>
 
-                        <div class="checkbox mb-3">
+                        <div className="form-floating">
+                            <input type="name" class="form-control" id="floatingInput" placeholder="email@example.com" 
+                            onChange={handleChange}
+                            value={formValues.meal}
+                            required
+                            name='meal'
+                            
+                            />
+                            <label for="floatingInput">Meal</label>
                         </div>
+
+
                         <button class="w-100 btn btn-lg btn-dark" type="submit">Add To Food Diary</button>
                         <p className="mt-5 mb-3 text-muted">© TrueFit</p>
                     </form>
