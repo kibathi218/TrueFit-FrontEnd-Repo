@@ -249,7 +249,7 @@ const FoodDiary = () => {
                                 <h4>{totalFat}g of fat</h4>
                             </div>
                             <div class="col macro-header">
-                                <h4>{totalProtein}g of protein</h4>
+                                <h4>{totalProtein}grams of protein</h4>
                             </div>
                         </div>
                     </div>
