@@ -65,7 +65,7 @@ export default function App() {
         <Route path="/foods" element={<Foods />} />
         <Route path='/add-food' element={<AddFood user={user} />} />
         <Route path="/food-details" />
-        <Route path="/food-diary/view/:id" element={<NewPage />} />
+        <Route path="/food-diary/edit/:food_id" element={<NewPage user={user} />} />
 
       </Routes>
     </div>

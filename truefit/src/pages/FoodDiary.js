@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Footer from "../components/Footer";
-import { GetFoodById } from "../services/FoodServices";
+import { GetFoodById, DeleteFood } from "../services/FoodServices";
 import { useNavigate } from 'react-router-dom'
 
 const FoodDiary = ({setUser}) => {
@@ -17,8 +17,13 @@ const FoodDiary = ({setUser}) => {
     const [totalProtein, settotalProtein] = useState([])
 
     const showFood= (food) => {
-        navigate(`view/:${food.id}`)
+        navigate(`edit/${food.id}`)
     }
+
+    const deleteFood = async (food) => {
+        await DeleteFood(food.id)
+        alert("Food Removed")
+    } 
 
 
 
@@ -76,7 +81,7 @@ const FoodDiary = ({setUser}) => {
                     <div >
                         <div class="row">
                             <div class="col">
-                                <h1>Breakfast</h1>
+                                <h2>Breakfast</h2>
                             </div>
                             <div class="col macro-header">
                                 <h3>Calories</h3>
@@ -114,6 +119,7 @@ const FoodDiary = ({setUser}) => {
                                         <div class="col">
                                             <p>{food.protein}g</p>
                                         </div>
+                                        <p>x</p>
                                         <hr />
                                     </div>
 
@@ -134,7 +140,7 @@ const FoodDiary = ({setUser}) => {
                                 {food.meal === 'lunch' ? (
                                     <div class="row">
                                         <div class="col">
-                                            <p>{food.foodName}</p>
+                                            <p onClick={() => showFood(food)}>{food.foodName}</p>
                                         </div>
                                         <div class="col">
                                             <p>{food.calories} calories</p>
@@ -168,7 +174,7 @@ const FoodDiary = ({setUser}) => {
                                 {food.meal === 'dinner' ? (
                                     <div class="row">
                                         <div class="col">
-                                            <p>{food.foodName}</p>
+                                            <p onClick={() => showFood(food)}>{food.foodName}</p>
                                         </div>
                                         <div class="col">
                                             <p>{food.calories} calories</p>
