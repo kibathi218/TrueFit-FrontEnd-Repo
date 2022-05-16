@@ -16,6 +16,12 @@
 * React
 * Node.JS
 
+
+### Futue Updates
+* Food API
+* Exercise API
+
+
 ### Tools Used
 * [Trello Board](https://trello.com/b/Xnhk7hdZ/ga-project-4)
 * [ERD / Component Hierarchy Diagram](https://app.diagrams.net/#G1xrU4jJ1_mWi2yt8QmgWRYn2FcF_BrTGm)
