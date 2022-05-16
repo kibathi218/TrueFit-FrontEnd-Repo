@@ -26,16 +26,16 @@ const AddFood = ({user}) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        await AddFoodToDiary({
-          userId: userNumber,
-          foodName: formValues.foodName,
-          calories: formValues.calories,
-          carbs: formValues.carbs,
-          fat: formValues.fat,
-          protein: formValues.protein,
-          date: formValues.date,
-          meal: formValues.meal
-        })
+        // await AddFoodToDiary({
+        //   userId: userNumber,
+        //   foodName: formValues.foodName,
+        //   calories: formValues.calories,
+        //   carbs: formValues.carbs,
+        //   fat: formValues.fat,
+        //   protein: formValues.protein,
+        //   date: formValues.date,
+        //   meal: formValues.meal
+        // })
         setFormValues({
             userId: '',
           foodName: '',
@@ -48,9 +48,6 @@ const AddFood = ({user}) => {
         })
         navigate('/food-diary')
 
-        // const pleaseWork = () => {
-        //     AddFoodToDiary()
-        // }
     }
 
 

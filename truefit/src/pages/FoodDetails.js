@@ -26,19 +26,6 @@ const FoodDetails = () => {
     }
 
 
-    // const kcal = myFoods.map((food) => (
-    //     <div>
-    //         {food.foodName === 'French Fries' ? (
-    //             <div>
-    //                (const sum = {food.calories} + {food.protein} )
-    //             </div>
-    //         ) : (
-    //             console.log("hi")
-    //         )}
-    //     </div>
-    // ))
-
-
     return (
         <div>
             <div className="container foods-page">

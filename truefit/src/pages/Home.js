@@ -49,13 +49,25 @@ const Home = () => {
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                        <h1>Hello World</h1>
+                            <div className="container">
+                                <img src="https://b.fssta.com/uploads/application/nba/headshots/1668.png" />
+                                <h4>This website changed my life!</h4>
+                                <h5 className="review-name">Jimmy Butler</h5>
+                            </div>
                         </div>
                         <div class="carousel-item">
-                           <h1>Hello World</h1>
+                        <div className="container">
+                                <img src="https://static.www.nfl.com/image/private/t_headshot_desktop/league/tmxfyxkmtrx42ei4qhvn" />
+                                <h4>Great and easy to use!</h4>
+                                <h5 className="review-name">Saquon Barkley</h5>
+                            </div>
                         </div>
                         <div class="carousel-item">
-                        <h1>Hello World</h1>
+                        <div className="container">
+                                <img src="https://a.espncdn.com/combiner/i?img=/i/headshots/mlb/players/full/30836.png&w=350&h=254" />
+                                <h4>I highly recommend anyone trying to get in shape to use this site!</h4>
+                                <h5 className="review-name">Mike Trout</h5>
+                            </div>
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

@@ -15,6 +15,7 @@ import Foods from "./pages/Foods";
 import AddFood from "./pages/AddFood";
 import NewPage from "./pages/NewPage";
 import ExerciseDiary from "./pages/ExerciseDiary";
+import AddExercise from "./pages/AddExercise";
 
 
 export default function App() {
@@ -29,22 +30,22 @@ export default function App() {
     setUser(user)
     toggleAuthenticated(true)
   }
-  
-  
-    const handleLogOut = () => {
-   
-      setUser(null)
-      toggleAuthenticated(false)
-      localStorage.clear()
-      navigate('/')
+
+
+  const handleLogOut = () => {
+
+    setUser(null)
+    toggleAuthenticated(false)
+    localStorage.clear()
+    navigate('/')
+  }
+
+  useEffect(() => {
+    const token = localStorage.getItem('token')
+    if (token) {
+      checkToken()
     }
-  
-    useEffect(() =>{
-      const token = localStorage.getItem('token')
-      if (token) {
-        checkToken()
-      }
-    }, [])
+  }, [])
 
 
 
@@ -52,9 +53,9 @@ export default function App() {
     <div>
       <header>
         <NavBar
-        authenticated={authenticated}
-        user={user}
-        handleLogOut={handleLogOut} 
+          authenticated={authenticated}
+          user={user}
+          handleLogOut={handleLogOut}
         />
       </header>
 
@@ -68,6 +69,7 @@ export default function App() {
         <Route path="/food-details" />
         <Route path="/food-diary/edit/:food_id" element={<NewPage user={user} />} />
         <Route path="/exercise-diary" element={<ExerciseDiary user={user} />} />
+        <Route path="/add-exercise" element={<AddExercise user={user} />} />
       </Routes>
     </div>
   )

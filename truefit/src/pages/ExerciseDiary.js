@@ -9,13 +9,6 @@ const ExerciseDiary = ({setUser}) => {
 
     const [myExercises, setMyExercises] = useState([])
 
-    // const [totalCalories, settotalCalories] = useState([])
-
-    // const [totalCarbs, settotalCarbs] = useState([])
-    // const [totalFat, settotalFat] = useState([])
-
-    // const [totalProtein, settotalProtein] = useState([])
-
     const showExercise= (exercise) => {
         navigate(`edit/${exercise.id}`)
     }
@@ -33,26 +26,6 @@ const ExerciseDiary = ({setUser}) => {
             console.log(data)
             setMyExercises(data)
 
-            // const result = data.reduce(function(sum, item){
-            //     return sum = sum+item.calories;
-            // },0);
-
-            // const totCarbs = data.reduce(function(sum, item){
-            //     return sum = sum+item.carbs;
-            // },0);
-
-            // const totFat = data.reduce(function(sum, item){
-            //     return sum = sum+item.fat;
-            // },0);
-
-            // const totProtein = data.reduce(function(sum, item){
-            //     return sum = sum+item.protein;
-            // },0);
-            
-            // settotalCalories(result);
-            // settotalCarbs(totCarbs)
-            // settotalFat(totFat)
-            // settotalProtein(totProtein)
         }
         handleExercises()
     }, [])
@@ -61,18 +34,6 @@ const ExerciseDiary = ({setUser}) => {
     const addExercise = () => {
         navigate(`/add-exercise`)
     }
-
-
-    // const kcal = myFoods.map((food) => (
-    //     <div>
-    //         {food.userId === 1 ? (
-    //             <p>{food.calories}</p>
-    //         ) : (
-    //             console.log("hi")
-    //         )}
-    //     </div>
-    // ))
-
 
     return (
         <div>
@@ -130,18 +91,7 @@ const ExerciseDiary = ({setUser}) => {
                             <div class="col">
                                 <h1>Totals:</h1>
                             </div>
-                            {/* <div class="col macro-header">
-                                <h4>{totalCalories} Calories</h4>
-                            </div>
-                            <div class="col macro-header">
-                                <h4>{totalCarbs}g of carbs</h4>
-                            </div>
-                            <div class="col macro-header">
-                                <h4>{totalFat}g of fat</h4>
-                            </div>
-                            <div class="col macro-header">
-                                <h4>{totalProtein}g of protein</h4>
-                            </div> */}
+
                         </div>
                     </div>
                         </div>

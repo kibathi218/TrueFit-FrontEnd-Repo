@@ -75,9 +75,7 @@
 
 .howto-card {
   text-align: center;
-  /* box-shadow: 10px 10px 5px #aaaaaa; */
   padding: 35px;
-  /* border: 2px solid black; */
 }
 
 .howto-header {
@@ -91,7 +89,7 @@
   width:840px;
   height:460px;
   margin: auto;
-  background-color: black;
+  background-color:rgb(248, 161, 102); 
   color: white;
 }
 
@@ -153,4 +151,25 @@ h5 {
 
 .exercises-page {
   padding-top: 100px;
+}
+
+.footer-center {
+  align-items: center;
+  text-align: center;
+  padding-left: 330px;
+}
+
+.carousel-item img {
+  width: 200px;
+  border: 2px solid black;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.carousel-item {
+  padding-top: 100px;
+}
+
+.review-name {
+  color: white;
 }

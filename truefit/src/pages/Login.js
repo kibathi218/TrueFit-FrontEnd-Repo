@@ -32,17 +32,17 @@ const LogIn = (props) => {
 
                         <div class="form-floating">
                             <input type="email" class="form-control" id="floatingInput" placeholder="email@example.com"
-                            name='email'
-                            value={formValues.email}
-                            onChange={handleChange}
+                                name='email'
+                                value={formValues.email}
+                                onChange={handleChange}
                             />
                             <label for="floatingInput">Email address</label>
                         </div>
                         <div class="form-floating">
                             <input type="password" class="form-control" id="floatingPassword" placeholder="Password"
-                            name='password'
-                            value={formValues.password}
-                            onChange={handleChange}
+                                name='password'
+                                value={formValues.password}
+                                onChange={handleChange}
                             />
                             <label for="floatingPassword">Password</label>
                         </div>

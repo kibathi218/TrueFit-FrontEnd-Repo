@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 import { GetFoodById, DeleteFood } from "../services/FoodServices";
 import { useNavigate } from 'react-router-dom'
 
-const FoodDiary = ({setUser}) => {
+const FoodDiary = ({ setUser }) => {
     let navigate = useNavigate()
 
 
@@ -16,14 +16,14 @@ const FoodDiary = ({setUser}) => {
 
     const [totalProtein, settotalProtein] = useState([])
 
-    const showFood= (food) => {
+    const showFood = (food) => {
         navigate(`edit/${food.id}`)
     }
 
     const deleteFood = async (food) => {
         await DeleteFood(food.id)
         alert("Food Removed")
-    } 
+    }
 
 
 
@@ -33,22 +33,22 @@ const FoodDiary = ({setUser}) => {
             console.log(data)
             setMyFoods(data)
 
-            const result = data.reduce(function(sum, item){
-                return sum = sum+item.calories;
-            },0);
+            const result = data.reduce(function (sum, item) {
+                return sum = sum + item.calories;
+            }, 0);
 
-            const totCarbs = data.reduce(function(sum, item){
-                return sum = sum+item.carbs;
-            },0);
+            const totCarbs = data.reduce(function (sum, item) {
+                return sum = sum + item.carbs;
+            }, 0);
 
-            const totFat = data.reduce(function(sum, item){
-                return sum = sum+item.fat;
-            },0);
+            const totFat = data.reduce(function (sum, item) {
+                return sum = sum + item.fat;
+            }, 0);
 
-            const totProtein = data.reduce(function(sum, item){
-                return sum = sum+item.protein;
-            },0);
-            
+            const totProtein = data.reduce(function (sum, item) {
+                return sum = sum + item.protein;
+            }, 0);
+
             settotalCalories(result);
             settotalCarbs(totCarbs)
             settotalFat(totFat)
@@ -119,7 +119,6 @@ const FoodDiary = ({setUser}) => {
                                         <div class="col">
                                             <p>{food.protein}g</p>
                                         </div>
-                                        <p>x</p>
                                         <hr />
                                     </div>
 
@@ -244,25 +243,25 @@ const FoodDiary = ({setUser}) => {
                     <div className="diary-meal">
 
                         <div className="">
-                        <div >
-                        <div class="row">
-                            <div class="col">
-                                <h1>Totals:</h1>
+                            <div >
+                                <div class="row">
+                                    <div class="col">
+                                        <h1>Totals:</h1>
+                                    </div>
+                                    <div class="col macro-header">
+                                        <h4>{totalCalories} Calories</h4>
+                                    </div>
+                                    <div class="col macro-header">
+                                        <h4>{totalCarbs}g of carbs</h4>
+                                    </div>
+                                    <div class="col macro-header">
+                                        <h4>{totalFat}g of fat</h4>
+                                    </div>
+                                    <div class="col macro-header">
+                                        <h4>{totalProtein}g of protein</h4>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col macro-header">
-                                <h4>{totalCalories} Calories</h4>
-                            </div>
-                            <div class="col macro-header">
-                                <h4>{totalCarbs}g of carbs</h4>
-                            </div>
-                            <div class="col macro-header">
-                                <h4>{totalFat}g of fat</h4>
-                            </div>
-                            <div class="col macro-header">
-                                <h4>{totalProtein}g of protein</h4>
-                            </div>
-                        </div>
-                    </div>
                         </div>
                     </div>
                 </div>
