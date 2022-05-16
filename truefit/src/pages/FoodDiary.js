@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 import { GetFoodById } from "../services/FoodServices";
 import { useNavigate } from 'react-router-dom'
 
-const FoodDiary = () => {
+const FoodDiary = ({setUser}) => {
     let navigate = useNavigate()
 
 
@@ -15,6 +15,10 @@ const FoodDiary = () => {
     const [totalFat, settotalFat] = useState([])
 
     const [totalProtein, settotalProtein] = useState([])
+
+    const showFood= (food) => {
+        navigate(`view/:${food.id}`)
+    }
 
 
 
@@ -50,7 +54,7 @@ const FoodDiary = () => {
 
 
     const addFood = () => {
-        navigate('/add-food')
+        navigate(`/add-food`)
     }
 
 
@@ -96,7 +100,7 @@ const FoodDiary = () => {
                                 {food.meal === 'breakfest' ? (
                                     <div class="row">
                                         <div class="col">
-                                            <p>{food.foodName}</p>
+                                            <p onClick={() => showFood(food)}>{food.foodName}</p>
                                         </div>
                                         <div class="col">
                                             <p>{food.calories} calories</p>
@@ -105,10 +109,10 @@ const FoodDiary = () => {
                                             <p>{food.carbs}g</p>
                                         </div>
                                         <div class="col">
-                                            <p>{food.carbs}g</p>
+                                            <p>{food.fat}g</p>
                                         </div>
                                         <div class="col">
-                                            <p>{food.carbs}g</p>
+                                            <p>{food.protein}g</p>
                                         </div>
                                         <hr />
                                     </div>

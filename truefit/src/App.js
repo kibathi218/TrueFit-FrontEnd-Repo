@@ -5,15 +5,20 @@ import { Route, Routes } from 'react-router'
 import Home from "./pages/Home";
 import LogIn from "./pages/Login";
 import Register from "./pages/Register";
+import { useNavigate } from 'react-router-dom'
+
 
 import { CheckSession } from './services/Auth'
 import { useEffect, useState } from 'react'
 import FoodDiary from "./pages/FoodDiary";
 import Foods from "./pages/Foods";
 import AddFood from "./pages/AddFood";
+import NewPage from "./pages/NewPage";
 
 
 export default function App() {
+
+  let navigate = useNavigate()
 
   const [authenticated, toggleAuthenticated] = useState(false)
   const [user, setUser] = useState(null)
@@ -30,6 +35,7 @@ export default function App() {
       setUser(null)
       toggleAuthenticated(false)
       localStorage.clear()
+      navigate('/')
     }
   
     useEffect(() =>{
@@ -53,12 +59,13 @@ export default function App() {
 
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/login' element={<LogIn />} />
+        <Route path='/login' element={<LogIn handleLogOut={handleLogOut} setUser={setUser} toggleAuthenticated={toggleAuthenticated} />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/food-diary/4" element={<FoodDiary />} />
+        <Route path="/food-diary" element={<FoodDiary user={user} />} />
         <Route path="/foods" element={<Foods />} />
-        <Route path='/add-food' element={<AddFood />} />
+        <Route path='/add-food' element={<AddFood user={user} />} />
         <Route path="/food-details" />
+        <Route path="/food-diary/view/:id" element={<NewPage />} />
 
       </Routes>
     </div>

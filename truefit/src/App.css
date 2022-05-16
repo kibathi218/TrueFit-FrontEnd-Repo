@@ -126,3 +126,23 @@
   padding-bottom: 30px;
 }
 
+.navbar-item {
+  text-decoration: none;
+  color: white;
+  padding-left: 20px;
+}
+
+a {
+  color: rgb(158, 158, 158);
+  text-decoration: none;
+  padding: 20px;
+}
+
+a:hover {
+  color: white;
+}
+
+h5 {
+  color: rgb(158, 158, 158);
+  padding-right: 5px;
+}

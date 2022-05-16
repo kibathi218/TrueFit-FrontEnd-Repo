@@ -18,8 +18,9 @@ const LogIn = (props) => {
         const payload = await SignInUser(formValues)
         setFormValues({ email: '', password: '' })
         props.setUser(payload)
-        // props.toggleAuthenticated(true)
-        navigate('/')
+        console.log("it worked you are signed in")
+        props.toggleAuthenticated(true)
+        navigate('/food-diary')
     }
 
     return (

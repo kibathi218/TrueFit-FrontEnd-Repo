@@ -4,9 +4,10 @@ import { AddFoodToDiary } from "../services/FoodServices";
 import { useNavigate } from 'react-router-dom'
 
 
-const AddFood = () => {
+const AddFood = ({user}) => {
 
     let navigate = useNavigate()
+    let userNumber = (user.id)
 
     const [formValues, setFormValues] = useState({ 
         userId: '',
@@ -26,7 +27,7 @@ const AddFood = () => {
     const handleSubmit = async (e) => {
         e.preventDefault()
         await AddFoodToDiary({
-          userId: formValues.userId,
+          userId: userNumber,
           foodName: formValues.foodName,
           calories: formValues.calories,
           carbs: formValues.carbs,
@@ -45,7 +46,11 @@ const AddFood = () => {
           date: '',
           meal: ''
         })
-        navigate('/food-diary/4')
+        navigate('/food-diary')
+
+        // const pleaseWork = () => {
+        //     AddFoodToDiary()
+        // }
     }
 
 
@@ -56,7 +61,7 @@ const AddFood = () => {
                     <form onSubmit={handleSubmit}>
                         <h1 className="h3 mb-3 fw-normal">Add Food</h1>
 
-                        <div className="form-floating">
+                        {/* <div className="form-floating">
                             <input type="name" class="form-control" id="floatingInput" placeholder="email@example.com" 
                             onChange={handleChange}
                             value={formValues.userId}
@@ -65,7 +70,7 @@ const AddFood = () => {
                             
                             />
                             <label for="floatingInput">User Id</label>
-                        </div>
+                        </div> */}
 
                         <div class="form-floating">
                             <input type="name" class="form-control" id="floatingInput" placeholder="email@example.com" 
