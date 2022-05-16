@@ -14,6 +14,7 @@ import FoodDiary from "./pages/FoodDiary";
 import Foods from "./pages/Foods";
 import AddFood from "./pages/AddFood";
 import NewPage from "./pages/NewPage";
+import ExerciseDiary from "./pages/ExerciseDiary";
 
 
 export default function App() {
@@ -66,7 +67,7 @@ export default function App() {
         <Route path='/add-food' element={<AddFood user={user} />} />
         <Route path="/food-details" />
         <Route path="/food-diary/edit/:food_id" element={<NewPage user={user} />} />
-
+        <Route path="/exercise-diary" element={<ExerciseDiary user={user} />} />
       </Routes>
     </div>
   )
