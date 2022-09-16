@@ -100,6 +100,8 @@ const ExerciseDiary = ({setUser}) => {
 
             </div>
 
+            <Footer />
+
         </div>
     )
 }

@@ -26,16 +26,16 @@ const AddFood = ({user}) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        // await AddFoodToDiary({
-        //   userId: userNumber,
-        //   foodName: formValues.foodName,
-        //   calories: formValues.calories,
-        //   carbs: formValues.carbs,
-        //   fat: formValues.fat,
-        //   protein: formValues.protein,
-        //   date: formValues.date,
-        //   meal: formValues.meal
-        // })
+        await AddFoodToDiary({
+          userId: userNumber,
+          foodName: formValues.foodName,
+          calories: formValues.calories,
+          carbs: formValues.carbs,
+          fat: formValues.fat,
+          protein: formValues.protein,
+          date: formValues.date,
+          meal: formValues.meal
+        })
         setFormValues({
             userId: '',
           foodName: '',
@@ -57,17 +57,6 @@ const AddFood = ({user}) => {
                 <div className="form-signin">
                     <form onSubmit={handleSubmit}>
                         <h1 className="h3 mb-3 fw-normal">Add Food</h1>
-
-                        {/* <div className="form-floating">
-                            <input type="name" class="form-control" id="floatingInput" placeholder="email@example.com" 
-                            onChange={handleChange}
-                            value={formValues.userId}
-                            required
-                            name='userId'
-                            
-                            />
-                            <label for="floatingInput">User Id</label>
-                        </div> */}
 
                         <div class="form-floating">
                             <input type="name" class="form-control" id="floatingInput" placeholder="email@example.com" 

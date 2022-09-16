@@ -14,7 +14,7 @@ const Home = () => {
                     </div>
                 </section>
             </div>
-
+<div className="diamond">
             <section className="howto">
                 <div className="container">
                     <h2 className="howto-header">The Key To Success</h2>
@@ -40,7 +40,7 @@ const Home = () => {
             </section>
 
             <section className="reviews">
-                <h1 className="reviews-header">Reviews</h1>
+                <h1 className="reviews-header">Testimonials</h1>
                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -80,6 +80,7 @@ const Home = () => {
                     </button>
                 </div>
             </section>
+            </div>
 
             <Footer />
 

@@ -112,6 +112,8 @@ const FoodDetails = () => {
                 </div>
             </div>
 
+            <Footer />
+
         </div>
     )
 }

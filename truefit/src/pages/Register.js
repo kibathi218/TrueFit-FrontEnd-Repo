@@ -87,7 +87,7 @@ const Register = (props) => {
 
                         <div class="checkbox mb-3">
                         </div>
-                        <button class="w-100 btn btn-lg btn-dark" type="submit">Sign in</button>
+                        <button class="w-100 btn btn-lg btn-dark" type="submit">Submit</button>
                         <p class="mt-5 mb-3 text-muted">© TrueFit</p>
                     </form>
                 </div>

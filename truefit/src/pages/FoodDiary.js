@@ -148,10 +148,10 @@ const FoodDiary = ({ setUser }) => {
                                             <p>{food.carbs}g</p>
                                         </div>
                                         <div class="col">
-                                            <p>{food.carbs}g</p>
+                                            <p>{food.fat}g</p>
                                         </div>
                                         <div class="col">
-                                            <p>{food.carbs}g</p>
+                                            <p>{food.protein}g</p>
                                         </div>
                                         <hr />
                                     </div>
@@ -182,10 +182,10 @@ const FoodDiary = ({ setUser }) => {
                                             <p>{food.carbs}g</p>
                                         </div>
                                         <div class="col">
-                                            <p>{food.carbs}g</p>
+                                            <p>{food.fat}g</p>
                                         </div>
                                         <div class="col">
-                                            <p>{food.carbs}g</p>
+                                            <p>{food.protein}g</p>
                                         </div>
                                         <hr />
                                     </div>
@@ -218,10 +218,10 @@ const FoodDiary = ({ setUser }) => {
                                             <p>{food.carbs}g</p>
                                         </div>
                                         <div class="col">
-                                            <p>{food.carbs}g</p>
+                                            <p>{food.fat}g</p>
                                         </div>
                                         <div class="col">
-                                            <p>{food.carbs}g</p>
+                                            <p>{food.protein}g</p>
                                         </div>
                                         <hr />
                                     </div>
@@ -237,7 +237,36 @@ const FoodDiary = ({ setUser }) => {
 
                     <div className="diary-meal">
                         <h2>Water</h2>
-                        <button className="btn btn-dark" onClick={() => addFood()}>Add Water</button>
+
+                        {myFoods.map((food) => (
+                            <div className="mb-2">
+                                {food.meal === 'water' ? (
+                                    <div class="row">
+                                        <div class="col">
+                                            <p>{food.foodName}</p>
+                                        </div>
+                                        <div class="col">
+                                            <p>{food.calories} calories</p>
+                                        </div>
+                                        <div class="col">
+                                            <p>{food.carbs}g</p>
+                                        </div>
+                                        <div class="col">
+                                            <p>{food.fat}g</p>
+                                        </div>
+                                        <div class="col">
+                                            <p>{food.protein}g</p>
+                                        </div>
+                                        <hr />
+                                    </div>
+
+                                ) : (
+                                    console.log("error - foodDiary line 105")
+                                )}
+                            </div>
+                        ))}
+                        
+                        <button className="btn btn-dark add-food-btn" onClick={() => addFood()}>Add Water</button>
                     </div>
 
                     <div className="diary-meal">
@@ -267,6 +296,8 @@ const FoodDiary = ({ setUser }) => {
                 </div>
 
             </div>
+
+            <Footer />
 
         </div>
     )

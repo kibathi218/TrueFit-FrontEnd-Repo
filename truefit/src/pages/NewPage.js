@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { GetFoodByIdNew, DeleteFood, UpdateFood } from "../services/FoodServices";
 import { useNavigate } from 'react-router-dom'
+import Footer from "../components/Footer";
 
 
 const NewPage = ({ user }) => {
@@ -32,7 +33,7 @@ const NewPage = ({ user }) => {
     useEffect(() => {
         const handleFoods = async () => {
             console.log(id)
-            const data = await GetFoodByIdNew(1)
+            const data = await GetFoodByIdNew(id)
             console.log(data)
             setSelectedFood(data)
         }
@@ -40,7 +41,7 @@ const NewPage = ({ user }) => {
     }, [])
 
     const deleteFood = async () => {
-        await DeleteFood(2)
+        await DeleteFood(1)
         navigate('/food-diary')
     }
 
@@ -77,7 +78,7 @@ const NewPage = ({ user }) => {
                 <div class="col">
                     <h3>{selectedFood.protein}g</h3>
                 </div>
-                <p onClick={() => deleteFood()}>x</p>
+                <button className="btn btn-dark" onClick={() => deleteFood()}>DELETE</button>
                 <hr />
             </div>
 
@@ -157,7 +158,7 @@ const NewPage = ({ user }) => {
                             </div>
 
 
-                            <button onClick={updateFood} class="w-100 btn btn-lg btn-dark" type="submit">Add To Food Diary</button>
+                            <button onClick={updateFood} class="w-100 btn btn-lg btn-dark" type="submit">UPDATE MEAL</button>
                             <p className="mt-5 mb-3 text-muted">© TrueFit</p>
                         </form>
                     </div>
@@ -165,6 +166,8 @@ const NewPage = ({ user }) => {
                 </div>
 
             </div>
+
+            <Footer />
         </div>
     )
 }

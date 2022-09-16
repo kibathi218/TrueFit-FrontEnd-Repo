@@ -1,45 +1,105 @@
 import React from "react";
 
+// function Clear() {
+//   document.getElementById("newsletter1").value = "1";
+// }
+
 const Footer = () => {
   return (
     <div>
-      <div class="container">
-        <footer class="py-5">
-          <div class="row footer-center">
-            <div class="col-2">
-              <h5>TrueFit</h5>
-              <ul class="nav flex-column">
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Foods</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Exercise</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Contact</a></li>
-              </ul>
-            </div>
+      {/* <!-- Footer --> */}
+<footer class="bg-dark text-center text-white footer">
+  {/* <!-- Grid container --> */}
+  <div class="container p-4">
+    {/* <!-- Section: Social media --> */}
+    <section class="mb-4">
+      {/* <!-- Facebook --> */}
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-facebook-f"></i>
+      </a>
 
-            <div class="col-4 offset-1">
-              <form>
-                <h5>Subscribe to our newsletter</h5>
-                <div class="d-flex w-100 gap-2">
-                  <label for="newsletter1" class="visually-hidden">Email address</label>
-                  <input id="newsletter1" type="text" class="form-control" placeholder="Email address" />
-                  <button class="btn btn-dark" type="button">Subscribe</button>
-                </div>
-              </form>
+      {/* <!-- Twitter --> */}
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-twitter"></i
+      ></a>
+
+      {/* <!-- Google --> */}
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-google"></i
+      ></a>
+
+      {/* <!-- Instagram --> */}
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-instagram"></i
+      ></a>
+
+      {/* <!-- Linkedin --> */}
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-linkedin-in"></i
+      ></a>
+
+      {/* <!-- Github --> */}
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-github"></i
+      ></a>
+    </section>
+    {/* <!-- Section: Social media --> */}
+
+    {/* <!-- Section: Form --> */}
+    <section class="">
+      <form action="">
+        {/* <!--Grid row--> */}
+        <div class="row d-flex justify-content-center">
+          {/* <!--Grid column--> */}
+          <div class="col-auto">
+            <p class="pt-2">
+              <strong>Sign up for our newsletter</strong>
+            </p>
+          </div>
+          {/* <!--Grid column--> */}
+
+          {/* <!--Grid column--> */}
+          <div class="col-md-5 col-12">
+            {/* <!-- Email input --> */}
+            <div class="form-outline form-white mb-4">
+              <input placeholder="Email Address" type="email" id="form5Example21" class="form-control" />
             </div>
           </div>
+          {/* <!--Grid column--> */}
 
-          <div class="d-flex justify-content-between py-4 my-4 border-top">
-            <p className="center-text">© 2021 TrueFit</p>
-            <ul class="list-unstyled d-flex">
-              <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use href="#twitter"></use></svg></a></li>
-              <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use href="#instagram"></use></svg></a></li>
-              <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use href="#facebook"></use></svg></a></li>
-            </ul>
+          {/* <!--Grid column--> */}
+          <div class="col-auto">
+            {/* <!-- Submit button --> */}
+            <button type="submit" class="btn btn-outline-light mb-4">
+              Subscribe
+            </button>
           </div>
-        </footer>
-      </div>
+          {/* <!--Grid column--> */}
+        </div>
+        {/* <!--Grid row--> */}
+      </form>
+    </section>
+    {/* <!-- Section: Form --> */}
+
+    {/* <!-- Section: Text --> */}
+    <section class="mb-4">
+      <p>
+        TrueFit. The all in one diet and fitness tracker you need to reach your goals.
+      </p>
+    </section>
+    {/* <!-- Section: Text --> */}
+
+    
+  </div>
+  {/* <!-- Grid container --> */}
+
+  {/* <!-- Copyright --> */}
+  <div class="text-center p-3">
+    © 2022 TrueFit
+  </div>
+  {/* <!-- Copyright --> */}
+</footer>
+{/* <!-- Footer --> */}
     </div>
   )
 }

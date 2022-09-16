@@ -48,8 +48,20 @@
   background-color: rgba(0,0,0,0.25);
 }
 
+.diamond {
+  background-image: url("https://img.freepik.com/premium-vector/perforated-grid-with-diamond-pattern-with-rounded-edges-as-repetitive-background_3442-1543.jpg?w=2000")
+}
+
+.copyright {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  bottom: 0;
+}
+
 .howto {
   padding-top: 250px;
+  /* background-image: url("https://img.freepik.com/premium-vector/perforated-grid-with-diamond-pattern-with-rounded-edges-as-repetitive-background_3442-1543.jpg?w=2000") */
+  
 }
 
 .howto-img {
@@ -88,14 +100,15 @@
 .carousel {
   width:840px;
   height:460px;
-  margin: auto;
   background-color:rgb(248, 161, 102); 
   color: white;
+  width: 1500px;
+  margin-right: 1200px;
 }
 
 .reviews {
   text-align: center;
-  padding: 40px 0 100px 40px;
+  padding: 0px 0 100px 40px;
 }
 
 .reviews-header {
@@ -173,3 +186,4 @@ h5 {
 .review-name {
   color: white;
 }
+

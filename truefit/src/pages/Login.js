@@ -57,6 +57,7 @@ const LogIn = (props) => {
             </div>
 
             <Footer />
+
         </div>
     )
 
