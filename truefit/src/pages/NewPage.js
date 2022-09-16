@@ -38,7 +38,7 @@ const NewPage = ({ user }) => {
             setSelectedFood(data)
         }
         handleFoods()
-    }, [])
+    }, )
 
     const deleteFood = async () => {
         await DeleteFood(1)

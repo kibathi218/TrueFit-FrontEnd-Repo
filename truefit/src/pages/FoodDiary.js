@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Footer from "../components/Footer";
-import { GetFoodById, DeleteFood } from "../services/FoodServices";
+import { GetFoodById} from "../services/FoodServices";
 import { useNavigate } from 'react-router-dom'
 
 const FoodDiary = ({ setUser }) => {
@@ -20,10 +20,10 @@ const FoodDiary = ({ setUser }) => {
         navigate(`edit/${food.id}`)
     }
 
-    const deleteFood = async (food) => {
-        await DeleteFood(food.id)
-        alert("Food Removed")
-    }
+    // const deleteFood = async (food) => {
+    //     await DeleteFood(food.id)
+    //     alert("Food Removed")
+    // }
 
 
 
@@ -63,15 +63,15 @@ const FoodDiary = ({ setUser }) => {
     }
 
 
-    const kcal = myFoods.map((food) => (
-        <div>
-            {food.userId === 1 ? (
-                <p>{food.calories}</p>
-            ) : (
-                console.log("hi")
-            )}
-        </div>
-    ))
+    // const kcal = myFoods.map((food) => (
+    //     <div>
+    //         {food.userId === 1 ? (
+    //             <p>{food.calories}</p>
+    //         ) : (
+    //             console.log("hi")
+    //         )}
+    //     </div>
+    // ))
 
 
     return (
